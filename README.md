@@ -1,2 +1,2 @@
 # paulmignard.com
-Personal Blog and random art content 
+Personal Blog and random art content!
