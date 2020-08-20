@@ -5,20 +5,141 @@
         <style>
 
             html{
+                background-color: #f8fafc;
                 font-family: sans-serif;
                 color:#333;
             }
 
             #content{
-                background-color:lightblue;
                 margin: 0 auto;
                 max-width:40rem;
             }
+
+            .white-box{
+                background-color:white;
+                border:1px solid #efefef;
+                box-shadow: 0 2px 4px 0 rgba(0,0,0,.05);
+            }
+
+            .default-pad{
+                padding:15px;
+            }
+            
+            #header{
+                display:flex;
+                flex-flow: row wrap;
+                justify:center;
+            }
+
+            #header .left{
+                flex-basis: 50%;
+                margin: auto 0;
+            }
+
+            #header #logo{
+                height:auto;
+                max-width:250px;
+            }
+
+            #header .right{
+                flex-basis: 50%;
+                margin: auto 0;
+            }
+
+            #header ul{
+                padding-left:0;
+                text-align:right;
+            }
+
+            #header nav li{
+                display:inline-block;
+                text-transform: lowercase;
+                padding: 0 5px;
+                font-size: .9em;
+            }
+
+            #footer{
+                font-size:.75em;
+                padding-top:35px;
+                text-align:center;
+            }
+
+            .author{
+                display:flex;
+                flex-flow: row wrap;
+                justify:center;
+            }
+
+            .circle{
+                border-radius:50%;
+            }
+
+            .author{
+                padding:35px 0 15px;
+            }
+
+            .author .avatar{
+                flex-basis:25%;
+                
+            }
+
+            .author .avatar img{
+                width:100%;
+                height:auto;
+                max-height:150px;
+                box-shadow: 0 2px 4px 0 rgba(0,0,0,.25);
+            }
+
+            .author .about{
+                flex-basis:75%;
+                text-align:left;
+            }
+
+            .author .about h2{
+                margin-top:0;
+                padding-left:20px;
+            }
+
+            .author .about p{
+                margin-top:0;
+                padding-left:20px;
+            }
+
         </style>
     </head>
     <body>
         <div id="content">
+        <header id="header">
+            <div class="left">
+                <h1><img id="logo" src="/images/paul-mignard.png" /></h1>
+            </div>
+            <div class="right">
+                <nav>
+                    <ul>
+                        <li><a href="/">Home</a></li>
+                        <li><a href="/">About</a></li>
+                        <li><a href="/">Instagram</a></li>
+                        <li><a href="/">Twitter</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+        <div class="all-posts white-box default-pad">
         {{ content }}
+        </div>
+        <footer id="footer">
+            <div class="author">
+                <div class="avatar">
+                    <img class="circle" src="/images/avatar_real.jpg" />
+                </div>
+                <div class="about">
+                    <h2>About This Site</h2>
+                    <p>Proin a est a massa elementum auctor. Fusce lorem diam, commodo ut nisl ac, semper tincidunt enim. Pellentesque commodo commodo ligula, sollicitudin pretium libero feugiat ac. Fusce dictum sodales sodales. Vestibulum convallis condimentum sem, vel consectetur nisi condimentum in. Morbi lobortis lectus non nisi consequat ultrices ac eget lectus. Etiam in feugiat lectus. Fusce interdum enim metus, non malesuada tellus condimentum iaculis. Pellentesque suscipit elementum dui a accumsan. Donec a ante nulla.</p>
+
+                    <p class="copyright">All content and images &copy; Copyright 2020, Paul Mignard</p>
+                </div>
+            </div>
+        </footer>
         </div>
     </body>
 </html>

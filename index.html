@@ -2,16 +2,11 @@
 title:      Paul Mignard
 layout:     layout
 ---
-<header>
-    <h1>Paul Mignard</h1>
-    <div class="tagline">Here's the tagline!</div>
+
+
+    <h2>All Posts</h2>
     <ul>
-        <li><a href="/">Home</a></li>
-        <li><a href="/">About</a></li>
-        <li><a href="/">Instagram</a></li>
-        <li><a href="/">Twitter</a></li>
+        {%- for post in collections.post -%}
+        <li><a href="{{ post.url }}">{{ post.data.title }}</a></li>
+        {%- endfor -%}
     </ul>
-</header>
-<div class="all-posts">
-    Index home page!!
-</div>

@@ -7,4 +7,7 @@ module.exports = function(eleventyConfig) {
         "md"
     ]);
 
+    // Pass through!
+    eleventyConfig.addPassthroughCopy("images");
+
 };
